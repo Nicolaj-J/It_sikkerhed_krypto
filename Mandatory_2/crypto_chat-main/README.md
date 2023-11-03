@@ -1,3 +1,13 @@
+# Assignment is done
+We have secured the chat by making a hybrid encryption system. Because the NaCl library doesn't support Diffie-Hellman, we had to make the hybrid ourselves by incorporating asymmetric and symmetric keys.
+To make the first secure channel both parties make a public and a private key, and exchange public keys.
+With those keys and their private keys, they make symmetric keys. (Basically Diffie-Hellman)
+But because the server broadcasts every message we need to have a symmetric key all clients can know.
+So we use the secure channel created by the asymmetric keys to transfer a symmetric key that every client and the server have. 
+In that way, we haven't changed the broadcast functionality of the server, and it's secure.
+
+
+
 # crypto_chat
 Repo for the crypto course Mandatory Task2
 
